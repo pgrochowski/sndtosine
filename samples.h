@@ -24,19 +24,19 @@ struct sample_cont {
 	fftw_complex *fft_out;
 };
 
-/* Linked list for storing amplitude peaks.
- *
- */
+/* Linked list for storing amplitude peaks. */
 struct data_lln {
         double freq;
         double ampl;
         void *next;
 };
 
+/* allocate memory for a sample_cont struct and all of its attached
+ * structs/arrays
+ */
 struct sample_cont *get_sample_cont (SF_INFO *wfinfo);
 
+/* free a sample_cont struct and its attached structs/arrays. */
 void free_sample_cont (struct sample_cont *samples);
-
-int dump_peaks_to_csv (const char* filepath, struct sample_cont *samples);
 
 #endif

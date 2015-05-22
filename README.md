@@ -1,7 +1,20 @@
 # sndtosine
 This program analyzes sound files and can filter and output results from an FFT
-calculation. This allows one to see the frequency spectrum of the given sound
-file. This will work with any sound file supported by libsndfile.
+calculation as a csv file. This allows one to see the frequency spectrum of the
+given sound file. This will work with any sound file supported by libsndfile.
+
+## Dependencies
+This code uses libsndfile and libfftw3. Both are available in the Ubuntu
+repository or as source code on their respective websites:
+
+* libsndfile - http://www.mega-nerd.com/libsndfile/
+
+* libfftw3 - http://www.fftw.org/
+
+## Compiling
+Provided dependencies are installed correctly, the program should build using
+gcc on Linux or mingw on Windows using make.
+
 ## Usage
 ./sndtosine operation level input output
 
